@@ -58,14 +58,13 @@ group :development, :test do
 end
 
 group :production do
-
+	gem 'pg'
 end
 
 group :test do
   gem 'shoulda-matchers'
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
-  gem 'pg'
 end
 
 group :development do
