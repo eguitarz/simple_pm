@@ -5,7 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-project = Project.create(title: 'SimplePM')
+project = Project.create(title: 'SimplePM', description: 'The simplest project management tool')
 plans = Plan.create([
 	{
 		title: 'Beta Release', 
