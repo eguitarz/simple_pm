@@ -2,3 +2,7 @@
 	= @project.title
 %p
 	= @project.description
+%ul
+	- @project.plans.each do |plan|
+		%li
+			= plan.title

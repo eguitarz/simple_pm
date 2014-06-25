@@ -12,14 +12,16 @@ plans = Plan.create([
 		description: 'We are going to launch this project on Aug 1!',
 		impact_analysis: 'There will be all new modules from scratch.',
 		status: 'created',
-		due_at: Time.now + 2.months
+		due_at: Time.now + 2.months,
+		project: project
 	},
 	{
 		title: 'Launch Release', 
 		description: 'We are going to launch this project on Sep 1!',
 		impact_analysis: 'The user model will be affected.',
 		status: 'created',
-		due_at: Time.now + 3.months
+		due_at: Time.now + 3.months,
+		project: project
 	}
 ])
 tasks = Task.create([
