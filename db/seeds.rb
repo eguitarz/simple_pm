@@ -46,5 +46,16 @@ tasks = Task.create([
 		progress: 0,
 		due_at: Time.now + 2.days,
 		plan: plans.first
+	},
+	{
+		title: 'Support Paypal',
+		description: 'Support pay by paypal',
+		impact_analysis: 'Some beta functions might shut off.',
+		status: 'work in progress',
+		estimated_work_hours: 24,
+		health: -1,
+		progress: 10,
+		due_at: Time.now + 2.days,
+		plan: plans.last
 	}
 ]);
