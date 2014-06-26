@@ -1,3 +1,17 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+$(document).on 'page:change', ->
+	$selectedTask = null
+	$('#task-list').delegate 'a', 'click', (e)->
+		if $(this).hasClass('active') then closeTaskDetail() else openTaskDetail( $(this) )
+
+	$('#task-detail').delegate '.close', 'click', ->
+		closeTaskDetail()
+
+	openTaskDetail = ($selectedTask)->
+		$selectedTask.addClass('active')
+		$selectedTask.siblings().removeClass('active')
+		$('#task-detail').removeClass('hidden')
+
+
+	closeTaskDetail = ->
+		$('#task-list .active').removeClass('active')
+		$('#task-detail').addClass('hidden')		

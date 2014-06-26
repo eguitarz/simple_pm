@@ -3,7 +3,7 @@
 %p
 	= @project.description
 .row
-	.col-md-6.col-md-offset-3
+	.col-md-6
 		.row
 			.col-md-6
 				#plan-list.list-group
@@ -11,3 +11,5 @@
 						= link_to plan.title, plan_path(plan.id), remote: true, class: 'list-group-item'
 			.col-md-6
 				#task-list.list-group
+	.col-md-6
+		#task-detail.hidden
