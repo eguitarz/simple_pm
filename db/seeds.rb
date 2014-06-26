@@ -33,7 +33,8 @@ tasks = Task.create([
 		estimated_work_hours: 2,
 		health: 1,
 		progress: 10,
-		due_at: Time.now + 1.days
+		due_at: Time.now + 1.days,
+		plan: plans.first
 	},
 	{
 		title: 'Landing page',
@@ -43,6 +44,7 @@ tasks = Task.create([
 		estimated_work_hours: 4,
 		health: 0,
 		progress: 0,
-		due_at: Time.now + 2.days
+		due_at: Time.now + 2.days,
+		plan: plans.first
 	}
 ]);
