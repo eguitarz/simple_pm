@@ -1,2 +1,6 @@
-var $tasks = $("<%= j( render(:partial => 'elements/task_list') ) %>");
-$('#task-list').html($tasks);
+if (this.lastSelectedPlan != $('#plan-list .active').attr('id') ) {
+	var $tasks = $("<%= j( render(:partial => 'elements/task_list') ) %>");
+	$('#task-list').html($tasks);
+}
+
+this.lastSelectedPlan = $('#plan-list .active').attr('id');
