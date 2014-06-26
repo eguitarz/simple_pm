@@ -23,4 +23,4 @@ $(document).on 'page:change', ->
 	$('#task-list').delegate '.task-item', 'click', (e)->
 		e.preventDefault()
 		e.stopPropagation()
-		window.location = $(this).attr('id').replace('-', 's/') # task-1 => tasks/1
+		window.location = $(this).attr('id').replace('-l-', 's/') # task-1 => tasks/1

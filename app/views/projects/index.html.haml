@@ -17,7 +17,7 @@
 			.col-md-6
 				#plan-list.list-group
 					- @project.plans.each do |plan|
-						= link_to "<div class=\"list-group-item-heading\">#{plan.title}</div><div class=\"list-group-item-text\">#{plan.id}</div>".html_safe, plan_path(plan.id), remote: true, class: 'list-group-item', id: "plan-#{plan.id}"
+						= link_to "<div class=\"list-group-item-heading\">#{plan.title}</div><div id=\"plan-l-#{plan.id}\" class=\"plan-item list-group-item-text\">#{plan.id}</div>".html_safe, plan_path(plan.id), remote: true, class: 'list-group-item', id: "plan-#{plan.id}"
 			.col-md-6
 				#task-list.list-group
 	.col-md-6
