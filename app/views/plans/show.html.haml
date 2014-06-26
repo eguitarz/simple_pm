@@ -1,4 +1,4 @@
 %ul
 	- @tasks.each do |t|
 		%li
-			= t.title
+			= link_to t.title, task_path(t.id)
