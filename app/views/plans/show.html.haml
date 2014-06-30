@@ -1,4 +1,5 @@
 %ul
+	= @plan.title
 	- @tasks.each do |t|
 		%li
 			= link_to t.title, task_path(t.id)

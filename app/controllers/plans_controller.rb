@@ -1,6 +1,7 @@
 class PlansController < ApplicationController
+	before_action :get_plan, only: [:show]
+
 	def show
-		@plan = Plan.find params[:id]
 		@tasks = @plan.tasks
 
 		respond_to do |format|
@@ -8,4 +9,11 @@ class PlansController < ApplicationController
 			format.js
 		end
 	end
+
+	private
+
+	def get_plan
+		@plan = Plan.find params[:id]
+	end
+
 end

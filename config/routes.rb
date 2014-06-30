@@ -6,8 +6,11 @@ SimplePm::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'projects#index'
-  resources :plans
-  resources :tasks
+  resources :plans do
+    shallow do
+      resources :tasks
+    end
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

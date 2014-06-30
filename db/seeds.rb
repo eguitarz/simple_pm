@@ -5,7 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-project = Project.create(title: 'SimplePM', description: 'The simplest project management tool')
+
+project = Project.create(
+	title: 'SimplePM', 
+	description: 'The simplest project management tool',
+	project_code: 'SPM'
+)
 plans = Plan.create([
 	{
 		title: 'Beta Release', 
@@ -13,7 +18,8 @@ plans = Plan.create([
 		impact_analysis: 'There will be all new modules from scratch.',
 		status: 'created',
 		due_at: Time.now + 2.months,
-		project: project
+		project: project,
+		relative_id: 1
 	},
 	{
 		title: 'Launch Release', 
@@ -21,7 +27,8 @@ plans = Plan.create([
 		impact_analysis: 'The user model will be affected.',
 		status: 'created',
 		due_at: Time.now + 3.months,
-		project: project
+		project: project,
+		relative_id: 2
 	}
 ])
 tasks = Task.create([
@@ -34,7 +41,8 @@ tasks = Task.create([
 		health: 1,
 		progress: 10,
 		due_at: Time.now + 1.days,
-		plan: plans.first
+		plan: plans.first,
+		relative_id: 1
 	},
 	{
 		title: 'Landing page',
@@ -45,7 +53,8 @@ tasks = Task.create([
 		health: 0,
 		progress: 0,
 		due_at: Time.now + 2.days,
-		plan: plans.first
+		plan: plans.first,
+		relative_id: 2
 	},
 	{
 		title: 'Support Paypal',
@@ -56,6 +65,7 @@ tasks = Task.create([
 		health: -1,
 		progress: 10,
 		due_at: Time.now + 2.days,
-		plan: plans.last
+		plan: plans.last,
+		relative_id: 3
 	}
 ]);
