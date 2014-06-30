@@ -4,3 +4,7 @@ if (this.lastSelectedPlan != $('#plan-list .active').attr('id') ) {
 }
 
 this.lastSelectedPlan = $('#plan-list .active').attr('id');
+
+// update plan detail
+var $plan = $("<%= j( render(:partial => 'elements/plan_detail') ) %>");
+$('#task-detail').html($plan);

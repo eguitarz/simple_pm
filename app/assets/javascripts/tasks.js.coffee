@@ -9,7 +9,7 @@ $(document).on 'page:change', ->
 
 	closeTaskDetail = ->
 		$('#task-list .active').removeClass('active')
-		$('#task-detail').addClass('hidden')		
+		$('#task-detail').addClass('hidden')
 
 	# Handle task item click event
 	$('#task-list').delegate 'a', 'click', (e)->
