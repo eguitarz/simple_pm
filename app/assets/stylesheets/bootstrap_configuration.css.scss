@@ -3,3 +3,13 @@
 $brand-primary: #428bca;
 $body-bg: #efefee;
 $text-color: #333332;
+
+.panel-plan-info {
+	border-color: #eee;
+}
+
+.panel-plan-info > .panel-heading {
+	color: #555;
+	background-color: #cdcdcd;
+	border-color: #eee;
+}

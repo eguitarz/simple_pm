@@ -1,0 +1,7 @@
+.panel.panel-plan-info
+	.panel-heading
+		= @plan.title
+		%button.close{type: 'button', :'aria-hidden' => 'true'} &times;
+	.panel-body
+		.task-description
+			= @plan.description
