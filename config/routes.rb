@@ -10,6 +10,13 @@ SimplePm::Application.routes.draw do
     shallow do
       resources :tasks
     end
+
+  end
+
+  resources :posts do
+    shallow do
+      resources :comments    
+    end
   end
 
   # Example of regular route:
