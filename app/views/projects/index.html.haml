@@ -6,9 +6,13 @@
 	.col-md-6
 		.row
 			.col-md-6
-				.list-heading Plans
+				%span.list-heading Plans
+				%span.create-href.pull-right
+					= link_to '<i class="glyphicon glyphicon-plus"></i>'.html_safe, new_plan_path
 			.col-md-6
-				.list-heading Tasks
+				%span.list-heading Tasks
+				%span.create-href.pull-right
+					= link_to '<i class="glyphicon glyphicon-plus"></i>'.html_safe, '#', class: 'create-task-link'
 	.col-md-6
 
 #list-contents.row

@@ -8,3 +8,6 @@ this.lastSelectedPlan = $('#plan-list .active').attr('id');
 // update plan detail
 var $plan = $("<%= j( render(:partial => 'elements/plan_detail') ) %>");
 $('#task-detail').html($plan);
+
+// Update new task path
+$('.create-task-link').attr('href', "<%= new_plan_task_path(@plan.id) %>")
